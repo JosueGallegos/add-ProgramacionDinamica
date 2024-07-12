@@ -18,6 +18,7 @@ public class Celda {
         result = prime * result + row; // Incorporamos la fila al código hash
         result = prime * result + col; // Incorporamos la columna al código hash
         return result; // Devolvemos el código hash generado
+        
     }
 
     // Método equals para comparar si dos instancias de Cell son iguales
@@ -35,5 +36,8 @@ public class Celda {
         if (col != other.col)
             return false; // Comparamos las columnas
         return true; // Si todas las comparaciones son iguales, los objetos son iguales
+        
+    
+        
     }
 }

@@ -1,6 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
+import Ejercicios.contorllers.Laberinto;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Programación Dinámica");
@@ -27,8 +29,10 @@ public class App {
         System.out.println("Time taken: " + (endtime - startime) + " ns");
         //System.out.println("Time taken: " + (endtime - startime)/1000000000.0 + " s");
         System.out.println(String.format("Time taken: %.9f segundos" , (endtime - startime)/ 1_000_000_000.0));
+        
+        
         /// Ejericio 1
-        // runEjercicio();
+        runEjercicio();
 
     }
 
@@ -78,14 +82,28 @@ public class App {
         return cache[n];
     }
 
+   
     public static void runEjercicio() {
+        Laberinto laberinto = new Laberinto();
+    
 
-        // boolean[][] grid = {
-        // { true, true, true, true },
-        // { false, false, false, true },
-        // { true, true, false, true },
-        // { true, true, false, true }
-        // };
+         boolean[][] grid1 = {
+            { true, true, true, true },
+            { false, false, false, true },
+            { true, true, false, true },
+            { true, true, false, true }
+        };
+        boolean[][] grid2 = {
+            { true, true, true, true },
+            { false, false, false, true },
+            { true, true, false, true },
+            { true, true, false, true }
+        };
+        System.out.println("Ejercicio 1 : " + laberinto.getPath(grid1)); 
+        System.out.println("Ejercicio 2 : "+ laberinto.getPath(grid2)); 
+
+        
 
     }
+   
 }
